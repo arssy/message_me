@@ -1,0 +1,51 @@
+<h2 class="ui center aligned icon medium header">
+  <i class="inverted brown circular coffee icon"></i>
+  Chatroom
+</h2>
+
+<div class="ui two column grid">
+
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatbox">
+      <!-- Content -->
+      <div class="content">
+        <div class="ui small feed">
+          <%= render @messages %>
+        </div>
+      </div> 
+      <!-- End Content --> 
+
+      <!-- Extra Content -->
+      <div class="extra content">
+        <form class="ui reply form">
+          <div class="field">
+            <div class="ui action fluid input">
+              <input type="text" placeholder="Type">
+              <button class="ui brown button"><i class="ui white location arrow icon"></i></button>
+            </div>
+          </div>
+        </form>
+      </div> 
+      <!-- End Extra Content --> 
+    </div>
+  </div>
+
+  <div class="four wide column">
+    <div class="ui fluid raised card">
+      <div class="content">
+        <div class="ui inverted vertical menu">
+          <a class="active item">
+            Home
+          </a>
+          <a class="item">
+            Messages
+          </a>
+          <a class="item">
+            Friends
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
