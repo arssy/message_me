@@ -7,3 +7,20 @@
 .chatbox{
   height: 450px;
 }
+
+.hidden{
+  display: none;
+}
+
+#message-container{
+  height: 360px;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.message-content {
+  width: 650px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}

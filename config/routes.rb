@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   delete '/sign_out', to: 'sessions#destroy'
 
   resources :messages
+
+  mount ActionCable.server, at: '/cable'
 end

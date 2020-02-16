@@ -8,8 +8,8 @@
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
       <!-- Content -->
-      <div class="content">
-        <div class="ui small feed">
+      <div class="content chatroom-messages", id="message-container">
+        <div class="ui small feed", id="messages">
           <%= render @messages %>
         </div>
       </div> 
@@ -17,11 +17,13 @@
 
       <!-- Extra Content -->
       <div class="extra content">
-        <%= form_with model: @message, class: "ui reply form" do |f| %> 
+        <%= form_with model: @message, class: "ui reply form", remote: true do |f| %> 
           <div class="field">
             <div class="ui action fluid input">
-              <%= f.text_field :message, placeholder: "Type.." %>
-              <%= f.button "<i class=\"ui white location arrow icon\"></i>".html_safe, class: "ui brown button" %>
+              <%= f.text_field :message, placeholder: "Type..", autocomplete: false %>
+              <div class="hidden">
+                <%= f.button "<i class=\"ui white location arrow icon\"></i>".html_safe, class: "ui brown button" %>
+              </div>
             </div>
           </div>
         <% end %>
