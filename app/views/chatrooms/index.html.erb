@@ -17,14 +17,14 @@
 
       <!-- Extra Content -->
       <div class="extra content">
-        <form class="ui reply form">
+        <%= form_with model: @message, class: "ui reply form" do |f| %> 
           <div class="field">
             <div class="ui action fluid input">
-              <input type="text" placeholder="Type">
-              <button class="ui brown button"><i class="ui white location arrow icon"></i></button>
+              <%= f.text_field :message, placeholder: "Type.." %>
+              <%= f.button "<i class=\"ui white location arrow icon\"></i>".html_safe, class: "ui brown button" %>
             </div>
           </div>
-        </form>
+        <% end %>
       </div> 
       <!-- End Extra Content --> 
     </div>

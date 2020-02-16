@@ -1,12 +1,10 @@
-<%# if flash.present? %>
+<% if flash.present? %>
   <div class="ui container">
     <% flash.each do |key, message| %>
-      <div class="ui <%= key %> message">
+      <div class="ui <%= key %> message transition">
         <i class="close icon"></i>
-        <ul class="list">
-          <li><%= message %></li>
-        </ul>
+        <%= message %>
       </div>
     <% end %>
   </div>
-<%# end %>
+<% end %>
